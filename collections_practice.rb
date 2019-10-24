@@ -30,12 +30,11 @@ def reverse_array(array)
    copy
 end 
 
-def kesha_maker(array)
-  new_array = []
-  array.each do |str| array.gsub "s","$"
-    new_array<< array
-    end 
-  new_array
+def kesha_maker(array) 
+  array.each do |str|
+    str[2] ="$" 
+  #  str.insert(2, '$') didnt work
+  end 
 end   
 
 def find_a(array)
@@ -52,10 +51,15 @@ def sum_array(array)
 end 
 
 def add_s(array)
-  ltr = s
-  array.each do |ltr| ltr.insert('s')
-    
-  end 
+  
+  array.each do |ltr|
+    if array[1]== ltr
+      ltr
+    else
+    ltr<<("s") 
+    end 
+  end      
   #array[element]<< "s" to each element 
     # except of 2nd element
+array
 end 
